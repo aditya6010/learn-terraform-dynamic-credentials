@@ -34,7 +34,8 @@ resource "azuread_application_federated_identity_credential" "tfc_federated_cred
 }
 
 resource "azurerm_role_assignment" "tfc_role_assignment" {
-  scope                = data.azurerm_subscription.current.id
+ # scope                = data.azurerm_subscription.current.id
+  scope                 = "/subscriptions/f389a383-b404-41ee-88be-d086acd81564/resourceGroups/dynamic-test"
   principal_id         = azuread_service_principal.tfc_service_principal.object_id
   role_definition_name = "Contributor"
 }
