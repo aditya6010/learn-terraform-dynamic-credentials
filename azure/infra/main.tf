@@ -7,7 +7,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "exampleTFResourceGroup"
+  name     = "dynamic-test"
   location = var.azure_location
 }
 
