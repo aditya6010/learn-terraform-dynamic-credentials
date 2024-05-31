@@ -10,7 +10,7 @@ provider "azuread" {}
 #data "azurerm_subscription" "current" {}
 
 resource "azuread_application" "tfc_application" {
-  display_name = "tfc-application"
+  display_name = "tfc-application_feb"
 }
 
 resource "azuread_service_principal" "tfc_service_principal" {
