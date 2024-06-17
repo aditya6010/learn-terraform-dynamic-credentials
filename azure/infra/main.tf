@@ -25,3 +25,12 @@ resource "azurerm_subnet" "example" {
   address_prefixes     = ["10.0.2.0/24"]
 }
 
+resource "azurerm_storage_account" "example" {
+  name                     = "sa170624"
+  resource_group_name      = "dynamic-test"
+  location                 = "southcentralus"
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+
+  tags = local.final_tags
+}
