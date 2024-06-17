@@ -1,4 +1,4 @@
-variable "mandatory_tags" {
+variable "tags_ws" {
 type = map(string)
 }
 
@@ -7,6 +7,6 @@ type = string
 }
 
 locals {
- final_tags = merge(var.mandatory_tags, {"env" =var.env})
+ final_tags = merge(var.tags_ws, {"env" =var.env})
 }
 
